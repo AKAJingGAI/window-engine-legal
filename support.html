@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Window Engine - Support</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; background: #0b1220; color: #dbe7ff; font: 16px/1.7 "Segoe UI", system-ui, sans-serif; }
+    main { max-width: 860px; margin: 0 auto; padding: 56px 24px 80px; }
+    h1 { font-size: 2rem; margin: 0 0 8px; }
+    h2 { margin-top: 36px; color: #8fb8ff; }
+    p, li { color: #c3d2ea; }
+    a { color: #7fb2ff; }
+    code { background: #162136; padding: 2px 6px; border-radius: 5px; }
+    .muted { color: #8ca0bd; font-size: 0.92rem; }
+    .card { background: #111b2e; border: 1px solid #1f2d46; border-radius: 14px; padding: 20px 24px; margin-top: 24px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Window Engine Support</h1>
+  <p class="muted">Last updated: 2026-11-21</p>
+
+  <div class="card">
+    <strong>Support hub:</strong>
+    <a href="https://steamcommunity.com/app/5673250/discussions/">Steam Community Discussions</a>
+  </div>
+
+  <h2>Before posting</h2>
+  <ul>
+    <li>Use Windows 10 22H2 or Windows 11, 64-bit.</li>
+    <li>Set target applications to windowed or borderless window mode. Exclusive fullscreen cannot be previewed or arranged.</li>
+    <li>If Steam verification is requested, start Steam, sign in with the purchasing account, and launch Window Engine from Steam.</li>
+    <li>After a successful verification, offline use is allowed for up to 30 days.</li>
+  </ul>
+
+  <h2>Logs and settings</h2>
+  <ul>
+    <li>Settings: <code>%APPDATA%\WindowEngine\settings.json</code></li>
+    <li>Logs: <code>%APPDATA%\WindowEngine\logs\</code></li>
+    <li>Offline license: <code>%LOCALAPPDATA%\WindowEngine\steam-license.dat</code></li>
+  </ul>
+  <p>When reporting a problem, include the app version, Windows version, and the latest log file. Do not post your Steam password or Steam Guard codes.</p>
+
+  <h2>Common issues</h2>
+  <ul>
+    <li><strong>Preview is black or unavailable:</strong> switch the renderer to PrintWindow in settings, or check whether the target window is minimized.</li>
+    <li><strong>Hotkeys do not work:</strong> another application may have registered the same combination; change the hotkey in settings.</li>
+    <li><strong>Startup without Steam:</strong> the app needs one successful Steam ownership check, then it can start offline for 30 days.</li>
+    <li><strong>Steam Cloud conflict:</strong> portable settings sync by timestamp. If two PCs changed settings at the same time, the newer copy wins.</li>
+  </ul>
+
+  <p class="muted">EVE Online is a trademark of CCP hf. Window Engine is not affiliated with or endorsed by CCP hf.</p>
+</main>
+</body>
+</html>

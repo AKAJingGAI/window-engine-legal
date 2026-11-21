@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Window Engine - Privacy Policy</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; background: #0b1220; color: #dbe7ff; font: 16px/1.7 "Segoe UI", system-ui, sans-serif; }
+    main { max-width: 860px; margin: 0 auto; padding: 56px 24px 80px; }
+    h1 { font-size: 2rem; margin: 0 0 8px; }
+    h2 { margin-top: 36px; color: #8fb8ff; }
+    p, li { color: #c3d2ea; }
+    a { color: #7fb2ff; }
+    code { background: #162136; padding: 2px 6px; border-radius: 5px; }
+    .muted { color: #8ca0bd; font-size: 0.92rem; }
+    .card { background: #111b2e; border: 1px solid #1f2d46; border-radius: 14px; padding: 20px 24px; margin-top: 24px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Window Engine Privacy Policy</h1>
+  <p class="muted">Last updated: 2026-11-21</p>
+
+  <div class="card">
+    <strong>Summary:</strong>
+    Window Engine is a local Windows window-management utility. It does not send
+    telemetry or usage data to the developer. It reads local window metadata to
+    display previews, stores settings on your PC, and uses Valve's Steam services
+    for ownership verification and optional Steam Cloud synchronization.
+  </div>
+
+  <h2>1. Data processed on your PC</h2>
+  <p>Window Engine reads the following local window metadata:</p>
+  <ul>
+    <li>Window titles, process names, window class names, window rectangles, and window state.</li>
+    <li>Which window is in the foreground or minimized.</li>
+    <li>Preview settings, layouts, hotkeys, themes, and per-client preferences that you configure.</li>
+  </ul>
+  <p>This information is used only to provide the app's window preview, arrangement, switching, and hotkey features. It is not uploaded to the developer.</p>
+
+  <h2>2. Local storage</h2>
+  <ul>
+    <li><code>%APPDATA%\WindowEngine\settings.json</code> — application settings.</li>
+    <li><code>%APPDATA%\WindowEngine\logs\</code> — local diagnostic logs.</li>
+    <li><code>%APPDATA%\WindowEngine\portable-settings.json</code> — portable settings used for Steam Cloud.</li>
+    <li><code>%LOCALAPPDATA%\WindowEngine\steam-license.dat</code> — encrypted offline license token containing the Steam ID, App ID, machine identifier hash, and license timestamps.</li>
+  </ul>
+
+  <h2>3. Steam and Valve</h2>
+  <p>When Steam is available, the app uses the Steamworks API to verify that the current Steam account owns Window Engine. Valve's Steam client processes your Steam account and license data under Valve's privacy policy.</p>
+  <p>If Steam Cloud is enabled, the app writes <code>portable-settings.json</code> through Valve's Steam Cloud service. The developer does not operate that service and does not receive that file.</p>
+
+  <h2>4. No telemetry or analytics</h2>
+  <p>Window Engine does not include third-party analytics, advertising SDKs, crash-reporting uploads, or telemetry. It does not collect your name, email address, payment information, or gameplay data.</p>
+
+  <h2>5. Offline license</h2>
+  <p>After a successful Steam ownership check, a 30-day offline license token is stored locally. It contains the Steam ID, App ID, a hash derived from Windows machine information, and timestamps. It is protected with Windows DPAPI and is not transmitted to the developer.</p>
+
+  <h2>6. Retention and deletion</h2>
+  <p>Local data remains on your PC until you delete it. You can remove settings and logs by deleting <code>%APPDATA%\WindowEngine</code>, and the offline license by deleting <code>%LOCALAPPDATA%\WindowEngine\steam-license.dat</code>.</p>
+
+  <h2>7. Children</h2>
+  <p>Window Engine is a general-purpose desktop utility and is not directed at children. It does not knowingly collect personal information from children.</p>
+
+  <h2>8. Changes</h2>
+  <p>If this policy changes, the updated version will be published on this page with a new effective date.</p>
+
+  <h2>9. Contact</h2>
+  <p>Support and privacy questions: <a href="https://steamcommunity.com/app/5673250/discussions/">Window Engine Steam Community Hub</a>.</p>
+
+  <p class="muted">EVE Online is a trademark of CCP hf. Window Engine is not affiliated with or endorsed by CCP hf.</p>
+</main>
+</body>
+</html>
